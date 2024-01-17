@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Currículo de Fulano de Tal</title>
+</head>
+
+<body>
+  <header>
+    <h1>Clínica ABC Health</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+  <main>
+    <!-- action é obrigatório? -->
+    <form action="cadastraCliente.php" method="post">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <p><label>Nome: <input type="text" id="dpNome" name="dpNome" minlength="2" maxlength="50" autofocus required></label></p>
+        <p><label>E-mail: <input type="email" id="dpEmail" name="dpEmail" required></label></p>
+        <p><label>CPF: <input type="text" id="dpCPF" name="dpCPF"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" required></label></p>
+        <p><label>Idade: <input type="number" id="dpIdade" name="dpIdade" required></label></p>
+        <p><label>Telefone: <input type="tel" id="dpTelefone" name="dpTelefone" required></label></p>
+        <p><label>Data de Nascimento: <input type="date" id="dpDataNasc" name="dpDataNasc"></label></p>
+        <!-- usar fieldset? usar div ou p?-->
+        <fieldset>
+          <legend>Sexo</legend>
+          <div><label><input type="radio" id="masculino" name="dpSexo" value="masculino"> Masculino</label></div>
+          <div><label><input type="radio" id="feminino" name="dpSexo" value="feminino"> Feminino</label></div>
+        </fieldset>
+        <fieldset>
+          <legend>Escolha o Estado Civil</legend>
+          <div><label><input type="radio" id="solteiro" name="dpEstadoCivil" value="solteiro"> Solteiro</label></div>
+          <div><label><input type="radio" id="casado" name="dpEstadoCivil" value="casado"> Casado</label></div>
+          <div><label><input type="radio" id="divorciado" name="dpEstadoCivil" value="divorciado"> Divorciado</label>
+          </div>
+        </fieldset>
+        <p><label>Nacionalidade: <input type="text" id="dpNacionalidade" name="dpNacionalidade"  value="brasileiro" readonly></label></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço de Entrega</legend>
+        <p><label>CEP: <input type="text" id="endCEP" name="endCEP" required></label></p>
+        <p><label>Tio de logradouro:
+            <!-- os IDs estão no lugar certo? -->
+            <select id="endTipoLogradouro" name="endTipoLogradouro" required>
+              <option id="rua" value="rua" selected>Rua</option>
+              <option id="avenida" value="avenida">Avenida</option>
+              <option id="praca" value="praca">Praça</option>
+            </select>
+          </label>
+        </p>
+        <p><label>Logradouro: <input type="text" id="endLogradouro" name="endLogradouro" required></label></p>
+        <p><label>Bairro: <input type="text" id="endBairrro" name="endBairrro" required></label></p>
+        <p><label>Cidade: <input type="text" id="endCidade" name="endCidade" required></label></p>
+        <p><label>Estado: <input type="text" id="endEstado" name="endEstado" required></label></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações Adicionais</legend>
+        <!-- Seleção de interesses pode ser um checkbox? -->
+        <fieldset>
+          <legend>Seleção de Interesses</legend>
+          <div><label><input type="checkbox" id="filmes" name="infoadInteresses[]" value="filmes"/> Filmes</label></div>
+          <div><label><input type="checkbox" id="informática" name="infoadInteresses[]" value="informática"/> Informática</label></div>
+          <div><label><input type="checkbox" id="games" name="infoadInteresses[]" value="games"/> Games</label></div>
+          <div><label><input type="checkbox" id="livros" name="infoadInteresses[]" value="livros"/> Livros</label></div>
+          <div><label><input type="checkbox" id="roupas" name="infoadInteresses[]" value="roupas"/> Roupas</label></div>
+        </fieldset>
+        
+        <!-- pode definir col e rows? -->
+        <p><label for="infoadInformacoes">Informações Adicionais</label></p>
+        <textarea id="infoadInformacoes" name="infoadInformacoes" rows="20" cols="80" placeholder="Digite aqui as informações adicionais"></textarea>
+        
+        <p><label>Enviar uma imagem: <input type="file" id="infoadImagem" name="infoadImagem" accept="image/*"></label></p>
+      </fieldset>
+
+      <input type="hidden" id="hiddenInputTest" name="hiddenInputTest" value="valueHiddenInputTest">
+
+      <button type="submit">Enviar</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <address>Av. João Naves de Ávila, Santa Mônica, Uberlândia</address>
+  </footer>
+</body>
+
+</html>
