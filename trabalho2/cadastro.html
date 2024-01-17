@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Currículo de Fulano de Tal</title>
+  <title>Clínica ABC Health</title>
 </head>
 
 <body>
@@ -20,17 +20,17 @@
     </ul>
   </nav>
   <main>
-    <!-- action é obrigatório? o enctype é assim? -->
-    <form action="cadastraCliente.php"  enctype="multipart/form-data" method="post">
+    <form action="cadastraCliente.php" enctype="multipart/form-data" method="post">
       <fieldset>
         <legend>Dados Pessoais</legend>
-        <p><label>Nome: <input type="text" id="dpNome" name="dpNome" minlength="2" maxlength="50" autofocus required></label></p>
+        <p><label>Nome: <input type="text" id="dpNome" name="dpNome" minlength="2" maxlength="50" autofocus
+              required></label></p>
         <p><label>E-mail: <input type="email" id="dpEmail" name="dpEmail" required></label></p>
-        <p><label>CPF: <input type="text" id="dpCPF" name="dpCPF"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" required></label></p>
+        <p><label>CPF: <input type="text" id="dpCPF" name="dpCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              placeholder="xxx.xxx.xxx-xx" required></label></p>
         <p><label>Idade: <input type="number" id="dpIdade" name="dpIdade" required></label></p>
         <p><label>Telefone: <input type="tel" id="dpTelefone" name="dpTelefone" required></label></p>
         <p><label>Data de Nascimento: <input type="date" id="dpDataNasc" name="dpDataNasc"></label></p>
-        <!-- usar fieldset? usar div ou p?-->
         <fieldset>
           <legend>Sexo</legend>
           <div><label><input type="radio" id="masculino" name="dpSexo" value="masculino"> Masculino</label></div>
@@ -43,19 +43,19 @@
           <div><label><input type="radio" id="divorciado" name="dpEstadoCivil" value="divorciado"> Divorciado</label>
           </div>
         </fieldset>
-        <p><label>Nacionalidade: <input type="text" id="dpNacionalidade" name="dpNacionalidade"  value="brasileiro" readonly></label></p>
+        <p><label>Nacionalidade: <input type="text" id="dpNacionalidade" name="dpNacionalidade" value="brasileiro"
+              readonly></label></p>
       </fieldset>
 
       <fieldset>
         <legend>Endereço de Entrega</legend>
         <p><label>CEP: <input type="text" id="endCEP" name="endCEP" required></label></p>
         <p><label>Tio de logradouro:
-            <!-- os IDs estão no lugar certo? -->
             <select id="endTipoLogradouro" name="endTipoLogradouro" required>
-              <option value="">...</option>
-              <option id="rua" value="rua">Rua</option>
-              <option id="avenida" value="avenida">Avenida</option>
-              <option id="praca" value="praca">Praça</option>
+              <option value="">selecione</option>
+              <option value="rua">Rua</option>
+              <option value="avenida">Avenida</option>
+              <option value="praca">Praça</option>
             </select>
           </label>
         </p>
@@ -67,21 +67,22 @@
 
       <fieldset>
         <legend>Informações Adicionais</legend>
-        <!-- Seleção de interesses pode ser um checkbox? -->
         <fieldset>
           <legend>Seleção de Interesses</legend>
           <div><label><input type="checkbox" id="filmes" name="infoadInteresses[]" value="filmes"> Filmes</label></div>
-          <div><label><input type="checkbox" id="informática" name="infoadInteresses[]" value="informática"> Informática</label></div>
+          <div><label><input type="checkbox" id="informática" name="infoadInteresses[]" value="informática">
+              Informática</label></div>
           <div><label><input type="checkbox" id="games" name="infoadInteresses[]" value="games"> Games</label></div>
           <div><label><input type="checkbox" id="livros" name="infoadInteresses[]" value="livros"> Livros</label></div>
           <div><label><input type="checkbox" id="roupas" name="infoadInteresses[]" value="roupas"> Roupas</label></div>
         </fieldset>
-        
-        <!-- pode definir col e rows? -->
+
         <p><label for="infoadInformacoes">Informações Adicionais</label></p>
-        <textarea id="infoadInformacoes" name="infoadInformacoes" rows="20" cols="80" placeholder="Digite aqui as informações adicionais"></textarea>
-        
-        <p><label>Enviar uma imagem: <input type="file" id="infoadImagem" name="infoadImagem" accept="image/*"></label></p>
+        <textarea id="infoadInformacoes" name="infoadInformacoes" rows="20" cols="80"
+          placeholder="Digite aqui as informações adicionais"></textarea>
+
+        <p><label>Enviar uma imagem: <input type="file" id="infoadImagem" name="infoadImagem" accept="image/*"></label>
+        </p>
       </fieldset>
 
       <input type="hidden" id="hiddenInputTest" name="hiddenInputTest" value="valueHiddenInputTest">
