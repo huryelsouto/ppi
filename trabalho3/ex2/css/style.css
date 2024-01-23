@@ -1,0 +1,108 @@
+body {
+    background-color: #f1f1f1;
+
+    font-family: Helvetica Neue, sans-serif;
+    color: #444;
+    line-height: 1.5;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+
+}
+
+input:invalid+span::after {
+    content: '✖';
+    color: red;
+}
+
+input:valid+span::after {
+    content: '✓';
+    color: limegreen;
+}
+
+#nome-clinica {
+    text-align: center;
+}
+
+.principal-fielset {
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+body input {
+    color: gray
+}
+
+nav, footer {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:link,
+nav a:visited {
+    color: #444;
+}
+
+nav a:hover {
+    color: #a0a0a0;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a:link {
+    color: rgb(0, 0, 0);
+}
+
+main a:visited {
+    color: rgb(128, 118, 118);
+}
+
+main a:hover {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+h2+p {
+    border-top: 1px solid rgb(68, 68, 68, 0.5);
+    padding-top: 1em;
+}
+
+section:has(h2) {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0px solid white;
+    border-radius: 1%;
+    margin: 1em;
+    padding: 1em;
+}
+
+:is(section, article, aside) :is(p) {
+    text-align: justify;
+}
+
+h2:first-child{
+    border-top: 1px solid rgb(68, 68, 68, 0.5);
+    padding-top: 1em;
+    text-align: center;
+}
+
+
+section:first-of-type {
+    background-color: rgba(0, 0, 0, 0.048);
+    
+}
+
+table {
+    margin: auto;
+}
