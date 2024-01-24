@@ -1,7 +1,7 @@
 body {
     background-color: #f1f1f1;
 
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     color: #444;
     line-height: 1.5;
 
@@ -27,14 +27,15 @@ input:valid+span::after {
 
 .principal-fielset {
     background-color: rgba(255, 255, 255, 0.5);
-    
+
 }
 
 body input {
     color: gray
 }
 
-nav, footer {
+nav,
+footer {
     text-align: center;
 }
 
@@ -79,7 +80,7 @@ h2+p {
     padding-top: 1em;
 }
 
-section:has(h2) {
+section:has( h2) {
     background-color: rgba(255, 255, 255, 0.5);
     border: 0px solid white;
     border-radius: 1%;
@@ -91,7 +92,7 @@ section:has(h2) {
     text-align: justify;
 }
 
-h2:first-child{
+h2:first-child {
     border-top: 1px solid rgb(68, 68, 68, 0.5);
     padding-top: 1em;
     text-align: center;
@@ -100,7 +101,7 @@ h2:first-child{
 
 section:first-of-type {
     background-color: rgba(0, 0, 0, 0.048);
-    
+
 }
 
 table {
