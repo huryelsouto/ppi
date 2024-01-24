@@ -13,6 +13,9 @@ body {
 
 main {
     background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border: 1px none black;
+    border-radius: 20px;
 }
 
 h1,
