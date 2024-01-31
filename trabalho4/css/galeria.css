@@ -22,10 +22,10 @@ main {
 
 
 main table img {
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
 
-    box-shadow: 2px 2px 3px hsla(0, 0%, 27%, 0.5);
+    box-shadow: 4px 4px 5px hsla(0, 0%, 27%, 0.5);
 
 }
 
