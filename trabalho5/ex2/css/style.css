@@ -30,14 +30,13 @@ main {
     margin: 0px auto 30px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .card{
-    margin: 0 auto;
     min-width: 250px;
     max-width: 350px;
 
