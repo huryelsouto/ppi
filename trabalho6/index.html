@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- tag de responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Trabalho 5</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <main class="container">
+    <form action="cadastraCliente.php" enctype="multipart/form-data" method="post">
+      <fieldset class="dados-pessoais-fielset">
+        <div class="row">
+          <div class="col-8">
+            <label for="dpNome" class="form-label">Nome Completo:</label>
+            <input type="text" class="form-control" id="dpNome" name="dpNome" minlength="2" maxlength="50" autofocus
+              required>
+            <!-- o for é para o id ou nome?-->
+          </div>
+          <div class="col-4">
+            <label for="dpCPF" class="form-label">CPF:</label>
+            <input type="text" class="form-control" id="dpCPF" name="dpCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              placeholder="xxx.xxx.xxx-xx" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <label for="dpEmail" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="dpEmail" name="dpEmail" required>
+          </div>
+          <div class="col-sm-4">
+            <label for="dpSenha" class="form-label">Senha:</label>
+            <input type="password" class="form-control" id="dpSenha" name="dpSenha" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="endereco-fielset">
+        <div class="row">
+          <div class="col-sm-3">
+            <label for="endCEP" class="form-label">CEP:</label>
+            <input type="text" class="form-control" id="endCEP" name="endCEP" required>
+          </div>
+          <div class="col-sm-9">
+            <label for="endEndereco" class="form-label">Endereço:</label>
+            <input type="text" class="form-control" id="endEndereco" name="endEndereco" placeholder="Avenida João Naves de Ávila" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <label for="endBairrro" class="form-label">Bairro:</label>
+            <input type="text" class="form-control" id="endBairrro" name="endBairrro" required>
+          </div>
+          <div class="col-sm">
+            <label for="endCidade" class="form-label">Cidade:</label>
+            <input type="text" class="form-control" id="endCidade" name="endCidade" required>
+          </div>
+          <div class="col-sm">
+            <label for="endEstados" class="form-label">Estado:</label>
+            <select class="form-select" id="endEstados" name="endEstados" required>
+              <option value="">Selecione...</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="termos" name="termos" required>
+            <label class="form-check-label" for="termos">Concordo com os termos</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <button class="btn btn-primary" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+            </svg>
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <!-- Bootstrap bundle com Javascript e biblioteca Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
