@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Alterando CSS</title>
+  <style>
+    article {
+      font: 2em /1.5 Georgia;
+      float: left;
+      width: 200px;
+      height: 200px;
+      margin: 5px;
+      padding: 5px 15px;
+      border: 1px solid lightgrey;
+      background-color: #f5f5f5;
+      box-shadow: 0px 0px 4px rgb(110, 187, 212);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <article>A</article>
+    <article>B</article>
+    <article>C</article>
+    <article>D</article>
+    <article>E</article>
+    <article>F</article>
+    <article>G</article>
+  </main>
+
+  <script>
+
+    window.onload = function () {
+      const artigos = document.querySelectorAll("article");
+      for (let artigo of artigos) {
+        artigo.onclick = () => artigo.style.visibility = 'hidden';
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

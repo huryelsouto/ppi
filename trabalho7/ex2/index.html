@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- tag de responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Trabalho 7</title>
+</head>
+
+<body>
+  <input type="text" name="nome">
+  <button type="button">Digite seu nome e clique aqui</button>
+  <p></p>
+
+  <img src="images/ex02-img01.png" alt="imagem da execução do exercício" width="500">
+
+  <script>
+    const botao = document.querySelector("button");
+    botao.onclick = function() {
+      const campoNome = document.querySelector("input");
+      const parSaida = document.querySelector("p");
+      parSaida.textContent = "Obrigado, " + campoNome.value;
+    };
+  </script>
+</body>
+
+</html>

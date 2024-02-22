@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Alterando Atributo</title>
+  <style>
+    body {
+      background-image: url("images/bg2.jpg");
+      background-size: cover;
+    }
+
+    main {
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <img src="images/logoUFU.png" alt="UFU">
+  </main>
+
+  <script>
+
+    window.addEventListener('load', function() {
+      const imagem = document.querySelector("img");
+      imagem.onclick = function () {
+        this.src = "images/logoFacom.png";
+        this.alt = "Faculdade de Computação";
+      } 
+    });
+
+  </script>
+
+</body>
+
+</html>

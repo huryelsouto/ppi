@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo querySelectorAll</title>
+  <style>
+    body {
+      font-family: Georgia;
+      line-height: 1.5rem;
+      background-image: url("images/bg2.jpg");
+      background-size: cover;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    main {
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h1>Clique neste título!</h1>
+    <h1>Também sou título H1</h1>
+    <h1>Também sou título H1</h1>
+    <h1>Também sou título H1</h1>
+  </main>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const nodeH1 = document.querySelector("h1");
+      nodeH1.addEventListener("click", alteraConteudoDosTitulosH1);
+    });
+
+    function alteraConteudoDosTitulosH1() {
+      const nodesH1 = document.querySelectorAll("h1");
+      for (let node of nodesH1)
+        node.textContent = "Você acabou de alterar a árvore DOM!";
+    }
+
+  </script>
+
+</body>
+
+</html>

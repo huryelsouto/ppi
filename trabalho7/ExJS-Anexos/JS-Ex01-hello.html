@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Depurando JavaScript no Navegador</title>
+</head>
+
+<body>
+
+  <h1>Definindo variaveis – Tecle F12 para depurar</h1>
+
+  <script>
+
+    let a = 1;
+    let b = 2;
+    let c = 3;
+
+    const d = b * b - 4 * a * c;
+    console.log('O valor do discriminante é: ' + d);
+
+    var E = true; // E é uma variável booleana
+    var F = 'Programação para Internet'; // F é uma string global
+
+    if (a < b) {
+      let k = a + b;  // k pode ser utilizada apenas aqui dentro
+      var m = k + 1;
+      console.log(k);
+    }
+
+    console.log(m); // m pode ser acessada
+    console.log(k); // erro, pois k é restrita ao 'if' acima
+
+  </script>
+
+  <h2>Mais código...</h2>
+
+  <script>
+    console.log(F);
+    console.log(window.F);
+  </script>
+
+</body>
+
+</html>
