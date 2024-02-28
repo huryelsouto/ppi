@@ -1,0 +1,35 @@
+main {
+    width: 25%;
+    margin: auto;
+    padding: 15px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+
+}
+
+div{
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px 5px;
+
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    width: 100%;
+
+    margin-bottom: 10px;
+
+}
+
+span {
+    color: rgb(223, 34, 34)
+}
